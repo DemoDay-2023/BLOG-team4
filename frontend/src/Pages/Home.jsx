@@ -28,23 +28,34 @@ export default function Home() {
  </form>
  </div>
  </div>
- <div className="flex justify-evenly">
- <div className="mt-[25vh]">
+ <div className="flex flex-wrap m-[2vw] w-[100vw] h-[100vh]">
+
+  
+ 
+ <div className="mt-[20vh]">
 <Text/>
 </div>
-<img src={pic2} alt="" />
-</div>
-<div className="flex justify-evenly">
+<img src={pic2} alt="" className="ml-[40vw]"/>
+
+
+
+
 <img src={pic3} alt="" />
-<div className="mt-[25vh]">
+<div className="mt-[20vh] ml-[30vw]">
 <Text/>
 </div>
-</div>
-<div className="flex justify-evenly">
-<div className="mt-[25vh]">
+
+
+
+
+<div className="mt-[20vh]">
 <Text/>
 </div>
-<img src={pic4} alt="" />
+<img src={pic4} alt="" className="mr-[30vh]"/>
+
+
+
+
 </div>
 <div>
     <div className="font-sans font-bold text-4xl flex justify-center mt-10">What people say about us</div>
