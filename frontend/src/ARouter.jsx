@@ -1,5 +1,5 @@
 import Home from "./Pages/Home";
-import Blogpost from "./Pages/Blogpost";
+import { Blogpost } from "./Pages/Blogpost";
 import Blog from "./Pages/Blog";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
