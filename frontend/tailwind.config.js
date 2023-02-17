@@ -11,6 +11,9 @@ module.exports = {
 
   theme: {
     extend: {},
+    fontFamily: {
+      Mulish: "Mulish",
+    },
   },
   plugins: [],
 };
