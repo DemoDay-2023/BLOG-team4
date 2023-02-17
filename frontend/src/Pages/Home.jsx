@@ -4,8 +4,8 @@ import Header from "../comp/Header";
 export const Home = () => {
   return (
     <div>
-      <p>Home</p>
       <Header />
+      <p>Home</p>
     </div>
   );
 };
