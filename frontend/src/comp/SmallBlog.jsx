@@ -20,3 +20,5 @@ export const SmallBlog = () => {
     </div>
   );
 };
+
+export default SmallBlog;

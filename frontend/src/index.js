@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import ARouter from "./ARouter";
+import "../src/index.css"
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 
