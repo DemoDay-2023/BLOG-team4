@@ -26,7 +26,8 @@ module.exports = {
       size: {
         'jij': "14px",
       },
-    },
   },
   plugins: [],
 }
+}
+
