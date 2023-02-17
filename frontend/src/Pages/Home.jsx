@@ -1,15 +1,13 @@
 import React from "react";
+import { Footer } from "../comp/Footer";
 import Header from "../comp/Header";
-import { Review } from "../comp/Review";
-import { SmallBlog } from "../comp/SmallBlog";
 
 export const Home = () => {
   return (
-    <div className="flex gap-5">
+    <div>
       <p>Home</p>
       <Header />
-      <Review />
-      <SmallBlog />
+      <Footer />
     </div>
   );
 };
