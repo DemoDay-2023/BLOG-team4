@@ -3,11 +3,12 @@ import ReactDOM from "react-dom/client";
 import ARouter from "./ARouter";
 import "../src/index.css"
 import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ARouter/>
+    <ARouter />
   </React.StrictMode>
 );
 

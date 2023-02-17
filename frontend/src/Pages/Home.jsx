@@ -1,18 +1,19 @@
 import React from "react";
 import pic1 from "../landingpage detials/pic1.jpg";
+import SmallBlog from "../comp/SmallBlog"
 import Huudas1 from "../comp/Huudas1";
 import Huudas2 from "../comp/Huudas2";
 import Huudas3 from "../comp/Huudas3";
-// import Header from "../comp/Header"
+import Header from "../comp/Header"
 
 export default function Home() {
   return (
     <div className="bg-grey-300">
       <div
-        className=" h-screen w-screen bg-repeat"
+        className=" h-screen bg-repeat"
         style={{ backgroundImage: `url(${pic1})` }}
       >
-        {/* <Header/> */}
+        <Header/>
         <div className="w-[450px] py-[300px] ml-[150px]  ">
           <div className="font-Sans font-bold text-[40px] text-white">
             Instant collaborations for remote teams
@@ -44,6 +45,7 @@ export default function Home() {
       <div className="font-Mulish font-bold text-[48px] ml-[35%] mt-[30vh]">
         What people say about us
       </div>
+      <SmallBlog/>
     </div>
   );
 }
