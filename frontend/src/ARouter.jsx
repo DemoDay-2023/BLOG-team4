@@ -1,7 +1,7 @@
 import Home from "./Pages/Home";
 import Blogpost from "./Pages/Blogpost";
 import Blog from "./Pages/Blog";
-import SmallBlog from "./comp/SmallBlog";
+// import SmallBlog from "./comp/SmallBlog";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -20,11 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/Blog",
     element: <Blog />,
-  },
-  {
-    path: "/",
-    element: <SmallBlog />,
-  },
+  }
 ]);
 
 function App() {

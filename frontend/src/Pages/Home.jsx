@@ -1,6 +1,5 @@
 import React from "react";
 import pic1 from "../landingpage detials/pic1.jpg";
-import SmallBlog from "../comp/SmallBlog"
 import Huudas1 from "../comp/Huudas1";
 import Huudas2 from "../comp/Huudas2";
 import Huudas3 from "../comp/Huudas3";
@@ -45,7 +44,6 @@ export default function Home() {
       <div className="font-Mulish font-bold text-[48px] ml-[35%] mt-[30vh]">
         What people say about us
       </div>
-      <SmallBlog/>
     </div>
   );
 }
