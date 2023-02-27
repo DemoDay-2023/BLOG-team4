@@ -4,20 +4,17 @@ import Footer from "../comp/Footer";
 import Proimg1 from "../img/profileimg1.svg";
 import Proimg2 from "../img/profileimg2.svg";
 import img2 from "../img/img2.png";
+import Profile1 from "../comp/Profile1"
 
 export const Blog = () => {
   return (
     <div>
       <Header />
       <div className="mx-[600px]">
-        <p className="text-5xl font-Mukta mt-[279px]">
+        <p className="text-5xl font-Mukta mt-[27vh] mb-[5vh]">
           10 Secrets for managing a remote team{" "}
         </p>
-        <div className="flex justify-around text-center w-[20vw] my-[99px]">
-          <img className="h-[55px] " src={Proimg1} alt="img" />
-          <p className="h-[2vh] mt-[1vh] text-grey border-r-2 pr-[2vw]">Shedrack eze</p>
-          <p className="h-[2vh] mt-[1vh] text-grey">2nd January,2022</p>
-        </div>
+        <Profile1/>
         <img className="w-[900px] my-[99px]" src={img2} alt="img" />
         <p className="w-[800px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque
@@ -69,7 +66,7 @@ export const Blog = () => {
           <input
             type="text"
             placeholder="Comments"
-            className="border-2 border-blackgr w-[630px] h-[148px] ml-20 mt-[-4vh]"
+            className="border-2 border-blackgr w-[630px] h-[148px] ml-20 mt-[-4vh] mb-[20vh]"
           />
         </div>
       </div>

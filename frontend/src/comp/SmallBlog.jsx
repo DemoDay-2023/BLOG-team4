@@ -4,7 +4,7 @@ import { Profile1 } from "./Profile1";
 
 export const SmallBlog = () => {
   return (
-    <div className="w-[380px] h-[425px] shadow-xl flex flex-col items-center rounded-[40px]">
+    <div className="w-[380px] h-[425px] shadow-xl flex flex-col items-center rounded-[40px] ml-[5vw] mb-[4vh]">
       <img src={pic1} alt="" className="rounded-t-[35px] top-0" />
       <div className="w-[340px] h-[300px] flex flex-col items-center gap-[26px]">
         <h1 className="w-[335px] h-auto font-[500] text-[24px] flex items-center mt-4">

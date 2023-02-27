@@ -4,6 +4,8 @@ import Huudas1 from "../comp/Huudas1";
 import Huudas2 from "../comp/Huudas2";
 import Huudas3 from "../comp/Huudas3";
 import Header from "../comp/Header"
+import Footer from "../comp/Footer"
+import Review from "../comp/Review"
 
 export default function Home() {
   return (
@@ -41,9 +43,17 @@ export default function Home() {
         <Huudas3 />
       </div>
 
-      <div className="font-Mulish font-bold text-[48px] ml-[35%] mt-[30vh]">
+      <div className="font-Mulish font-bold text-[48px] ml-[35%] mt-[30vh] mb-[2vh]">
         What people say about us
       </div>
+      <div  className=" mb-[20vh] flex flex-wrap">
+      <Review/>
+      <Review/>
+      <Review/>
+      <Review/>
+      <Review/>
+      </div>
+      <Footer/>
     </div>
   );
 }

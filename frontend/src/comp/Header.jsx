@@ -9,7 +9,7 @@ export const Header = () => {
     setAccess(!access);
   };
   return (
-    <div className="flex space-x-10 justify-between mt-5 mr-[100px] ml-[100px]">
+    <div className="flex space-x-10 justify-between pt-5 mr-[100px] ml-[100px]">
       <div className="flex flex-row">
         <Link
           to="/"

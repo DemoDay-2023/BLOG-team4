@@ -15,3 +15,5 @@ export const Profile1 = () => {
     </div>
   );
 };
+
+export default Profile1;

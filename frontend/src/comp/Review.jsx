@@ -4,7 +4,7 @@ import rosesocute from "../pic/rosesocute.jpeg";
 
 export const Review = () => {
   return (
-    <div className="bg-white w-[366px] h-[374px] gap-5 rounded-[30px] shadow-xl flex flex-col justify-center items-center">
+    <div className="bg-white w-[366px] h-[374px] gap-5 rounded-[30px] shadow-xl flex flex-col justify-center items-center ml-[2vw]">
       <div className="flex flex-row gap-2 w-[291px] h-auto justify-start">
         <img src={star} alt="" className="w-[17px] h-[16px]" />
         <img src={star} alt="" className="w-[17px] h-[16px]" />
@@ -30,3 +30,5 @@ export const Review = () => {
     </div>
   );
 };
+
+export default Review;
