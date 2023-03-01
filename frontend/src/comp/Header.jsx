@@ -51,8 +51,8 @@ export const Header = () => {
           Contact
         </Link>
         <Link
-          to="/Blog"
-          onClick={pathname === "/Blog"}
+          to="/Signin"
+          onClick={pathname === "/Signin"}
           className={`font-Mulish font-bold text-xl decoration-solid decoration-gray-300 ${
             pathname === "/" ? "text-white" : "text-black"
           }`}
