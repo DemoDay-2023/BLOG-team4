@@ -1,4 +1,6 @@
 const connect = require("./helper/db");
+const userRouter = require("./route/userRoute");
+const commentRouter = require("./route/commentRouter");
 
 connect();
 
@@ -18,9 +20,9 @@ const corsOptions = {
 app.use(express.json());
 app.use(cors(corsOptions));
 
-const userRouter = require("./route/userRoute");
 
 app.use("/users", userRouter);
+app.use("/comments", commentRouter);
 app.listen(port, () => {
   console.log(`server is running at localhost:${port} =====> 3000`);
 });

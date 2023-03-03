@@ -1,12 +1,46 @@
-import React from "react";
+import { React, useEffect, useState, useRef } from "react";
 import Header from "../comp/Header";
 import Footer from "../comp/Footer";
 import Proimg1 from "../img/profileimg1.svg";
 import Proimg2 from "../img/profileimg2.svg";
 import img2 from "../img/img2.png";
-import Profile1 from "../comp/Profile1"
+import Profile1 from "../comp/Profile1";
+import axios from "axios";
 
 export const Blog = () => {
+
+
+  const [history, setHistory] = useState();
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/comments")
+      .then((response) => {
+        setHistory(response.data.data);
+        console.log(response.data.data.email)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+
+
+  const comment = useRef();
+  const submit = () => {
+    axios
+      .post("http://localhost:8000/comments", {
+        comment: comment.current.value,
+      })
+      .then(function (response) {
+        console.log(response.data.data.comment);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+
+
   return (
     <div>
       <Header />
@@ -14,7 +48,7 @@ export const Blog = () => {
         <p className="text-5xl font-Mukta mt-[27vh] mb-[5vh]">
           10 Secrets for managing a remote team{" "}
         </p>
-        <Profile1/>
+        <Profile1 />
         <img className="w-[900px] my-[99px]" src={img2} alt="img" />
         <p className="w-[800px]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque
@@ -52,22 +86,32 @@ export const Blog = () => {
           ipsa! Rerum reprehenderit labore quas! Perferendis voluptatibus
           inventore, est veritatis in fugit dolorem expedita voluptas.
         </p>
-        <div className="my-[99px]">
+        <div className="mt-[99px]">
           <img className="h-[55px] mb-[-8vh]" src={Proimg1} alt="img" />
           <div className="ml-[100px] ">
-          <p className="text-jij">Written by</p>
-          <p className="text-[24px]">Shedrack Eze</p>
-          <p className="text-jij text-grey">CEO Team App</p>
+            <p className="text-jij">Written by</p>
+            <p className="text-[24px]">Shedrack Eze</p>
+            <p className="text-jij text-grey">CEO Team App</p>
           </div>
         </div>
         <div>
-          <p className="text-blackgr text-[24px] font-Mulish mb-[1vw]" >Join the conversation</p>
-          <img className="h-[55px] " src={Proimg2} alt="img" />
+          {history &&
+            history.map((item, index) => {
+              return <Comment comment={item.comment} email={item.email}  key={index} />;
+            })}
+        </div>
+        <p className="text-blackgr text-[24px] font-Mulish mb-[1vw] mt-[4vh]">
+          Join the conversation
+        </p>
+        <img className="h-[55px] " src={Proimg2} alt="img" />
+        <div>
           <input
+            ref={comment}
             type="text"
             placeholder="Comments"
             className="border-2 border-blackgr w-[630px] h-[148px] ml-20 mt-[-4vh] mb-[20vh]"
           />
+          <button onClick={submit}>submit</button>
         </div>
       </div>
       <Footer />
@@ -76,3 +120,15 @@ export const Blog = () => {
 };
 
 export default Blog;
+
+const Comment = ({ comment , email}) => {
+  //     backend deer limit(5) hiisen 
+  return (
+    <div className="w-[100vw] my-[2vh] flex items-start">
+      <div className="w-[50vw] h-[10vh] border-black border-2 rounded-lg">
+      <p className=" mx-[2vw] mt-[1vh] text-jij text-grey">{email}</p>
+      <p className=" mx-[2vw] mb-[1vh] ">{comment}</p>
+      </div>
+    </div>
+  );
+};
